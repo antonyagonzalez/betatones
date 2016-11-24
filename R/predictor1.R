@@ -1,4 +1,15 @@
-
+#' Extract regression model data for predictor 1
+#'
+#' Pull the regression coefficient, standard error, t-value and p-value
+#' for the first predictor specified in your linear model.
+#'
+#' @param lm linear model
+#'
+#' @return beta, se, t-value, p-value
+#' @export
+#' @examples
+#' model <- lm(formula = Sepal.Length ~ Petal.Length * Petal.Width, data = Study1)
+#' predictor1(model)
 predictor1 <- function(lm) {
   modelsum <- summary(lm)
   out <- c(modelsum$coefficients[2],
