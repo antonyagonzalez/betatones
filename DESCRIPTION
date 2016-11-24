@@ -6,7 +6,9 @@ Authors@R: person("Antonya", "Gonzalez", email = "antonya.marie@gmail.com",
 Description: Makes the process of interpreting regression analyses easier by
     extracting information for individual predictors and interactions at the
     variable levels designated in the model.
-Depends: R (>= 3.3.1)
+Depends:
+    R (>= 3.3.1)
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 5.0.1
