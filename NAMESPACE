@@ -3,6 +3,7 @@
 export(interact12)
 export(interact13)
 export(interact23)
+export(interact3)
 export(predictor1)
 export(predictor2)
 export(predictor3)
