@@ -8,8 +8,8 @@
 #' @return beta, se, t-value, p-value
 #' @export
 #' @examples
-#' model <- lm(formula = Sepal.Length ~ Petal.Length * Petal.Width, data = Study1)
-#' predictor1(model)
+#' example <- lm(formula = Sepal.Length ~ Petal.Length * Petal.Width, data = iris)
+#' predictor1(example)
 predictor1 <- function(lm) {
   modelsum <- summary(lm)
   out <- c(modelsum$coefficients[2],
