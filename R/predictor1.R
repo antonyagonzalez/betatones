@@ -1,3 +1,4 @@
+
 predictor1 <- function(lm) {
   modelsum <- summary(lm)
   out <- c(modelsum$coefficients[2],
