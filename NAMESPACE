@@ -3,6 +3,8 @@
 export(cov_interact12)
 export(cov_interact13)
 export(cov_interact3)
+export(covariate)
+export(covariate2)
 export(interact12)
 export(interact13)
 export(interact23)
