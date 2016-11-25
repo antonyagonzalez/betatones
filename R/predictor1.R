@@ -12,10 +12,13 @@
 #' predictor1(example)
 predictor1 <- function(lm) {
   modelsum <- summary(lm)
+  modelci <- confint(lm, level = 0.95, method = "boot")
   out <- c(modelsum$coefficients[2],
            modelsum$coefficients[2,2],
            modelsum$coefficients[2,3],
-           modelsum$coefficients[2,4])
-  names(out) <- c("beta", "se", "t-value", "p-value")
+           modelsum$coefficients[2,4],
+           modelci[1],
+           modelci[1,2])
+  names(out) <- c("beta", "se", "t-value", "p-value", "ci95_low", "ci95_high")
   return(out)
 }

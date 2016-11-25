@@ -14,10 +14,13 @@
 #' interact23(example)
 interact23 <- function(lm) {
   modelsum <- summary(lm)
+  modelci <- confint(lm, level = 0.95, method = "boot")
   out <- c(modelsum$coefficients[7],
            modelsum$coefficients[7,2],
            modelsum$coefficients[7,3],
-           modelsum$coefficients[7,4])
-  names(out) <- c("beta", "se", "t-value", "p-value")
+           modelsum$coefficients[7,4],
+           modelci[6],
+           modelci[6,2])
+  names(out) <- c("beta", "se", "t-value", "p-value", "ci95_low", "ci95_high")
   return(out)
 }
