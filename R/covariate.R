@@ -17,8 +17,8 @@ covariate <- function(lm) {
            modelsum$coefficients[5,2],
            modelsum$coefficients[5,3],
            modelsum$coefficients[5,4],
-           modelci[4],
-           modelci[4,2])
+           modelci[5],
+           modelci[5,2])
   names(out) <- c("beta", "se", "t-value", "p-value", "ci95_low", "ci95_high")
   return(out)
 }

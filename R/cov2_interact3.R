@@ -18,8 +18,8 @@ cov2_interact3 <- function(lm) {
            modelsum$coefficients[10,2],
            modelsum$coefficients[10,3],
            modelsum$coefficients[10,4],
-           modelci[9],
-           modelci[9,2])
+           modelci[10],
+           modelci[10,2])
   names(out) <- c("beta", "se", "t-value", "p-value", "ci95_low", "ci95_high")
   return(out)
 }

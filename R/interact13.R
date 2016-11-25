@@ -19,8 +19,8 @@ interact13 <- function(lm) {
            modelsum$coefficients[6,2],
            modelsum$coefficients[6,3],
            modelsum$coefficients[6,4],
-           modelci[5],
-           modelci[5,2])
+           modelci[6],
+           modelci[6,2])
   names(out) <- c("beta", "se", "t-value", "p-value", "ci95_low", "ci95_high")
   return(out)
 }

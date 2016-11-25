@@ -16,3 +16,17 @@ Study1 <- read_csv("test-data.csv")
 
 model <- lm(formula = percentcorrectZ ~ mathscoreZ * condition1 * gender1, data = Study1)
 summary(model)
+
+predictor1 <- function(lm) {
+  modelsum <- summary(lm)
+  modelci <- confint(lm, level = 0.95, method = "boot")
+  out <- c(modelsum$coefficients[2],
+           modelsum$coefficients[2,2],
+           modelsum$coefficients[2,3],
+           modelsum$coefficients[2,4],
+           modelci[1],
+           modelci[1,2])
+  names(out) <- c("beta", "se", "t-value", "p-value", "ci95_low", "ci95_high")
+  return(out)
+}
+predictorci(model)

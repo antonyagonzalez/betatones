@@ -17,8 +17,8 @@ predictor1 <- function(lm) {
            modelsum$coefficients[2,2],
            modelsum$coefficients[2,3],
            modelsum$coefficients[2,4],
-           modelci[1],
-           modelci[1,2])
+           modelci[2],
+           modelci[2,2])
   names(out) <- c("beta", "se", "t-value", "p-value", "ci95_low", "ci95_high")
   return(out)
 }
