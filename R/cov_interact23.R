@@ -12,8 +12,8 @@
 #' @export
 #' @examples
 #' example <- lm(formula = Sepal.Length ~ Petal.Length * Petal.Width * Sepal.Width, data = iris)
-#' interact23(example)
-interact23 <- function(lm) {
+#' cov_interact23(example)
+cov_interact23 <- function(lm) {
   modelsum <- summary(lm)
   modelci <- confint(lm, level = 0.95, method = "boot")
   out <- c(modelsum$coefficients[8],
