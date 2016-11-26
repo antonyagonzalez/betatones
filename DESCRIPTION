@@ -1,6 +1,6 @@
 Package: betatones
 Title: Extracting Coefficient Information from a Regression Model
-Version: 0.0.0.9000
+Version: 0.1.1
 Authors@R: person("Antonya", "Gonzalez", email = "antonya.marie@gmail.com",
     role = c("aut", "cre"))
 Description: Makes the process of interpreting regression analyses easier by
