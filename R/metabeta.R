@@ -22,7 +22,7 @@ metabeta <- function(b1, se1, b2, se2) {
   weight2 <- (b2 * inv2)
   sum_weight <- (weight1 + weight2)
   meta_b <- (sum_weight/sum_inv)
-  meta_se <- sqrt(1/sum_weight)
+  meta_se <- sqrt(1/sum_inv)
   z <- (meta_b/meta_se)
   p <- 2*pnorm(-abs(z))
   ci95_low <- (meta_b - (1.96 * meta_se))
